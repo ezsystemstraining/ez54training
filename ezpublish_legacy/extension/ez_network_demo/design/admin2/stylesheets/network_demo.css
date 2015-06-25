@@ -1,0 +1,68 @@
+/* eznetwork admin2 CSS 20100126 */
+
+/* dashboard */
+#ez-version, #ez-version.ok
+{
+    color: green !important;
+}
+
+#ez-version.not-ok
+{
+    color: red !important;
+}
+
+
+/* topmenu style */
+#header-topmenu ul li.unselected.eznetwork_demonavigationpart a
+{
+    text-shadow: none;
+    color: #6DCFF6;
+}
+
+#header-topmenu ul li.unselected.eznetwork_demonavigationpart a:hover
+{
+    color: #ffe9bd;
+}
+
+div.eznetwork_demonavigationpart #header-topmenu ul li.eznetwork_demonavigationpart a
+{
+    border-top-color: #ff9b00;
+    border-left-color: #ff9b00;
+    border-right-color: #ff9b00;
+}
+
+
+div.eznetwork_demonavigationpart #header
+{
+    border-bottom-color: #ff9b00;
+}
+
+.loginpage #header #header-design
+{
+    background: transparent url('../images/network_demo/ez_logo_big_ent_trial.png') center 80% no-repeat !important;
+}
+
+#header-logo a, #header-logo span
+{
+    background: transparent url('../images/network_demo/ez_logo_small_ent_trial.png')  11px 11px no-repeat  !important;
+}
+
+#dashboard-logo
+{
+    background: transparent url('../images/network_demo/ez_logo_big_black_ent_trial.png') left top no-repeat  !important;
+}
+
+#mainteinance-text
+{
+    margin-left: 200px;
+}
+
+#footer
+{
+    display: none !important;
+}
+
+.loginpage #footer
+{
+    display: block !important;
+}

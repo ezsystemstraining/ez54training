@@ -1,22 +1,31 @@
-# eZ Publish 5
+# eZ Publish 5 Training
 
-## What is eZ Publish?
-**eZ Publish 5** is a professional PHP CMS (content management system).
+## Install this repository
 
-It strives to be database, platform and browser independent. Because it is
-browser based it can be used from anywhere, on any device, as long as you have
-access to the Internet. One of it's unique features is how you can model
-content without having to change your database. It allows you to effectively
-define model structures using fields, trees and relations, and has a very
-flexible permission system which allows you to define who has access to
-perform actions under which limiting factors.
+You could find a full installation of eZ Publish community (based on 2014.11)
 
-eZ Publish exists in two versions; this, the community version is available under
-the GPLv2 license, while several extended versions for enterprise & business is available
-under a more permissive business license, see [ez.no](http://ez.no/) for more info.
+[*] Front office is available with siteaccess **ezdemo_site_user** and domain name **http://www.ezt.dev**
+[*] Back office is available with siteaccess **ezdemo_site_admin** and domain name **http://admin.ezt.dev**
+[*] Database dump is available at the root folder **eztraining.sql.gz**. Database name should be **eztraining**
+[*] Admin credentials are:  Login: **admin**  / Password: **publish**
 
-## Install, Upgrade and Getting started
-For installation & upgrade instructions, see [INSTALL.md](https://github.com/ezsystems/ezpublish-community/blob/master/INSTALL.md).
+You have to use those commands line to generate everything:
+
+```
+$php ezpublish/console ezpublish:legacy:script bin/php/ezpgenerateautoloads.php --siteaccess=ezdemo_site_admin
+$php ezpublish/console ezpublish:legacy:assets_install --symlink web
+$php ezpublish/console assets:install --symlink web
+$php ezpublish/console assetic:dump --env=dev
+```
+
+## Customize this repository
+
+If you would like to adapt the configuration for your environment, please edit those files:
+
+[*] ezpublish/config/ezpublish.yml
+[*] ezpublish_legacy/settings/override/site.ini.append.php
+[*] ezpublish_legacy/settings/ezdemo_site_user/site.ini.append.php
+[*] ezpublish_legacy/settings/ezdemo_site_admin/site.ini.append.php
 
 To get started with coding, see [GETTING_STARTED.md](https://github.com/ezsystems/ezpublish-community/blob/master/GETTING_STARTED.md).
 
@@ -30,28 +39,6 @@ Minimum PHP version is 5.3.17, but 5.5.x is recommended.
 eZ Publish 5 is **100% data compatible** with version 4, as in the same
 database can be used by following the [normal](http://doc.ez.no/eZ-Publish/Upgrading) upgrade path.
 
-## Architecture
-
-### Public API
-**eZ Publish 5** relies on a flexible, layered, service oriented API.
-The Public API consists of the Model (the M in MVC) and all
-apis related to operations available for this Model. More info can be found
-in /vendor/ezsystems/ezpublish-kernel/Readme.md after installation.
-
-### MVC
-eZ Publish 5 is built on top of **[Symfony2](http://symfony.com)** full stack framework, taking advantage of
-every component provided, including all its **Hierarchical Model View Controller** (aka *HMVC*) power.
-
-### Chained routing
-A chain router is introduced, allowing to take advantage of declared routes in the `routing.yml` config file as well as
-URL aliases to match content (aka *dynamic routing*), or routing fallback to the old eZ Publish 4 modules.
-
-### Template engine
-The default template engine used by the system is **[Twig](http://twig.sensiolabs.org/)**.
-**Twig** is a modern, powerful and easy to extend template engine.
-
-> As Symfony2 allows usage of multiple template engines, it is also possible to do so in eZ Publish 5, but all the
-> content oriented functionality are only available with Twig.
 
 
 ## COPYRIGHT

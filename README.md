@@ -29,6 +29,10 @@ $php ezpublish/console assetic:dump --env=dev
 * Database dump is available at the root folder **eztraining.sql.gz**. Database name should be **eztraining**
 * Admin credentials are:  Login: **admin**  / Password: **publish**
 
+### *For the training*
+
+
+
 ## Customize this repository
 
 If you would like to adapt the configuration for your environment, please edit those files:

@@ -5,9 +5,9 @@
 /bin/phpunit
 /ezpublish/cache/
 /ezpublish/logs/
-/ezpublish_legacy/var/log
-/ezpublish_legacy/var/cache
-/ezpublish_legacy/var/ezdemo_site/cache
+/ezpublish_legacy/var/log/
+/ezpublish_legacy/var/cache/
+/ezpublish_legacy/var/ezdemo_site/cache/
 /ezpublish/sessions
 /web/index_treemenu.php
 /web/index_rest.php

@@ -12,4 +12,7 @@ ShowClasses[]=forums
 ShowClasses[]=gallery
 ShowClasses[]=blog
 ShowClasses[]=place_list
+
+ShowClasses[]=artist_homepage
+ShowClasses[]=tour
 */ ?>

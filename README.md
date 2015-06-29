@@ -4,10 +4,21 @@
 
 You could find a full installation of eZ Publish community (based on 2014.11)
 
-[*] Front office is available with siteaccess **ezdemo_site_user** and domain name **http://www.ezt.dev**
-[*] Back office is available with siteaccess **ezdemo_site_admin** and domain name **http://admin.ezt.dev**
-[*] Database dump is available at the root folder **eztraining.sql.gz**. Database name should be **eztraining**
-[*] Admin credentials are:  Login: **admin**  / Password: **publish**
+### Installation instructions
+
+1. Clone the repository: ```git clone https://github.com/ezsystemstraining/ez54training.git```
+2. Install your virtualhost for Apache2. You could find an example at the root folder: ```eztraining.template```. Don't forget to activate module_rewrite on the webserver.
+3. Check your configuration system via command line: ```php ezpublish/check.php```
+4. Create a database named ```eztraining```
+5. Import database from sql file.
+6. You probably need to configure your machine to activate local domain name: ```www.ezt.dev``` and ```admin.ezt.dev```
+
+### Customize eZ Publish default installation 
+
+* Front office is available with siteaccess **ezdemo_site_user** and domain name **http://www.ezt.dev**
+* Back office is available with siteaccess **ezdemo_site_admin** and domain name **http://admin.ezt.dev**
+* Database dump is available at the root folder **eztraining.sql.gz**. Database name should be **eztraining**
+* Admin credentials are:  Login: **admin**  / Password: **publish**
 
 You have to use those commands line to generate everything:
 
@@ -22,10 +33,10 @@ $php ezpublish/console assetic:dump --env=dev
 
 If you would like to adapt the configuration for your environment, please edit those files:
 
-[*] ezpublish/config/ezpublish.yml
-[*] ezpublish_legacy/settings/override/site.ini.append.php
-[*] ezpublish_legacy/settings/ezdemo_site_user/site.ini.append.php
-[*] ezpublish_legacy/settings/ezdemo_site_admin/site.ini.append.php
+* ezpublish/config/ezpublish.yml
+* ezpublish_legacy/settings/override/site.ini.append.php
+* ezpublish_legacy/settings/ezdemo_site_user/site.ini.append.php
+* ezpublish_legacy/settings/ezdemo_site_admin/site.ini.append.php
 
 To get started with coding, see [GETTING_STARTED.md](https://github.com/ezsystems/ezpublish-community/blob/master/GETTING_STARTED.md).
 

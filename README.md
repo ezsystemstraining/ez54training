@@ -16,7 +16,7 @@ You could find a full installation of eZ Publish community (based on 2014.11)
 You have to use those commands line to generate everything:
 
 ```
-$php ezpublish/console ezpublish:legacy:script bin/php/ezpgenerateautoloads.php --siteaccess=ezdemo_site_admin
+$php ezpublish/console ezpublish:legacy:script bin/php/ezpgenerateautoloads.php
 $php ezpublish/console ezpublish:legacy:assets_install --symlink web
 $php ezpublish/console assets:install --symlink web
 $php ezpublish/console assetic:dump --env=dev

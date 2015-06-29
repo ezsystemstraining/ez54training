@@ -29,9 +29,13 @@ $php ezpublish/console assetic:dump --env=dev
 * Database dump is available at the root folder **eztraining.sql.gz**. Database name should be **eztraining**
 * Admin credentials are:  Login: **admin**  / Password: **publish**
 
-### *For the training*
+### *For developers training*
 
+When everything works correctly, you have to import an other database *eztraining_final.sql*
 
+1. Extract the dump file: ```gzip -d eztraining_final.sql.gz```
+2. Purge caches: ```$php ezpublish/console cache:clear --env=dev```
+3. You should have an error on Front Office but backoffice is still working.
 
 ## Customize this repository
 

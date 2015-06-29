@@ -13,13 +13,6 @@ You could find a full installation of eZ Publish community (based on 2014.11)
 5. Import database from sql file.
 6. You probably need to configure your machine to activate local domain name: ```www.ezt.dev``` and ```admin.ezt.dev```
 
-### Customize eZ Publish default installation 
-
-* Front office is available with siteaccess **ezdemo_site_user** and domain name **http://www.ezt.dev**
-* Back office is available with siteaccess **ezdemo_site_admin** and domain name **http://admin.ezt.dev**
-* Database dump is available at the root folder **eztraining.sql.gz**. Database name should be **eztraining**
-* Admin credentials are:  Login: **admin**  / Password: **publish**
-
 You have to use those commands line to generate everything:
 
 ```
@@ -28,6 +21,13 @@ $php ezpublish/console ezpublish:legacy:assets_install --symlink web
 $php ezpublish/console assets:install --symlink web
 $php ezpublish/console assetic:dump --env=dev
 ```
+
+### Customize eZ Publish default installation 
+
+* Front office is available with siteaccess **ezdemo_site_user** and domain name **http://www.ezt.dev**
+* Back office is available with siteaccess **ezdemo_site_admin** and domain name **http://admin.ezt.dev**
+* Database dump is available at the root folder **eztraining.sql.gz**. Database name should be **eztraining**
+* Admin credentials are:  Login: **admin**  / Password: **publish**
 
 ## Customize this repository
 
@@ -49,7 +49,6 @@ Minimum PHP version is 5.3.17, but 5.5.x is recommended.
 ## Backwards compatibility
 eZ Publish 5 is **100% data compatible** with version 4, as in the same
 database can be used by following the [normal](http://doc.ez.no/eZ-Publish/Upgrading) upgrade path.
-
 
 
 ## COPYRIGHT
